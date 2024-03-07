@@ -20,21 +20,31 @@ const navItemsInfo = [
 ]
 
 const NavItem = ({ item }) => {
+
+    const [dropdown, setDropdown] = useState(false)
+
+    const toggleDropdownhandler = () => {
+        setDropdown((curState) => {
+            return !curState;
+        })
+    }
+
+
     return (
         <li className='relative group'>
             {item.type === "link" ? (
                 <>
                     <a href="/" className='px-4 py-2'>{item.name}</a>
-                    <span className='text-blue-500 absolute transtion-all duration-500 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100  '>/</span>
+                    <span className='cursor-pointer text-blue-500 absolute transtion-all duration-500 font-bold right-0 top-0 group-hover:right-[90%] opacity-0 group-hover:opacity-100  '>/</span>
                 </>
             ) : (
-                <>
-                  <a href="/" className='px-4 py-2 flex gap-x-1 items-center'>
+                <div className='flex flex-col items-center'>
+                  <button className='px-4 py-2 flex gap-x-1 items-center' onClick={toggleDropdownhandler}>
                     <span>{item.name}</span>
                     <MdKeyboardArrowDown />
-                  </a>
-                  <div className='hidden transition-all duration-500 pt-4  absolute bottom-0 right-0 transform translate-y-full group-hover:block w-max '>
-                    <ul className='flex flex-col shadow-lg rounded-lg overflow-hidden'>
+                  </button>
+                  <div className={`${dropdown ? "block" : 'hidden'} lg:hidden transition-all duration-500 pt-4  lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-max`}>
+                    <ul className='bg-dark-soft lg:bg-transparent text-center flex flex-col shadow-lg rounded-lg overflow-hidden'>
                         {item.items.map((page) => (
                             
                                 <a href="/" className='hover:bg-dark-hard hover:text-white px-4 py-2 text-white lg:text-dark-soft'>
@@ -46,7 +56,7 @@ const NavItem = ({ item }) => {
                     </ul>
 
                   </div>
-                </>
+                </div>
 
             )
             }
