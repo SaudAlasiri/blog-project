@@ -15,7 +15,7 @@ const breadCrumbsData = [
   const postsData = [
     {
       _id: "1",
-      image: images.Post1Image,
+      image: images.post1,
       title: "Help children get better education",
       createdAt: "2023-01-28T15:35:53.607+0000",
     },
@@ -71,13 +71,8 @@ const breadCrumbsData = [
             </h1>
             <div className="mt-4 text-dark-soft">
               <p className="leading-7">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae
-                congue mauris rhoncus aenean vel elit scelerisque. In egestas erat
-                imperdiet sed euismod nisi porta lorem mollis. Morbi tristique
-                senectus et netus. Mattis pellentesque id nibh tortor id aliquet
-                lectus proin.
+                ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
               </p>
             </div>
           </article>
