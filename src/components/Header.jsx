@@ -6,7 +6,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 
 
-import { images } from '../constants/images'
+import { images } from '../constants'
 
 
 const navItemsInfo = [
