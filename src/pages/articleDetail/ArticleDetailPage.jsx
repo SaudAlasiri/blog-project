@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import BreadCrumbs from "../../components/BreadCrumbs";
 import CommentsContainer from "../../components/comments/CommentsContainer";
 import MainLayout from "../../components/MainLayout";
-import SocialShareButtons from "../../components/SocialShareButton";
+import SocialShareButtons from "../../components/SocialShareButtons";
 import { images } from "../../constants";
 import SuggestedPosts from "./container/SuggestedPosts";
 
